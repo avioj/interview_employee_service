@@ -1,0 +1,2 @@
+class StatusIsNotSuccess(Exception):
+    pass
