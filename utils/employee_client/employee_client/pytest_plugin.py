@@ -1,4 +1,5 @@
 import pytest
+from .employee_client import EmployeeClient
 
 
 @pytest.hookimpl
@@ -9,4 +10,4 @@ def pytest_addoption(parser):
 
 @pytest.fixture()
 def employee_client(request):
-    request.config.getoption("--employee_host")
+    return EmployeeClient(request.config.getoption("--employee_host"))
